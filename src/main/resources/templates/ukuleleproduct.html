@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="index :: head"></head>
+<body onload="TrangThaiHang()">
+
+	<nav th:replace="index :: header"></nav>
+	<nav th:replace="ukulele :: ukulele_menu"></nav>
+
+
+	<div class="container jumbotron right">
+
+
+		<div class="menu-title">
+			<a>THÔNG TIN SẢN PHẨM</a>
+		</div>
+
+
+		<!--san pham-->
+		<div class="col-sm-6 ">
+			<div class="product-image">
+				<img class="img-responsive "
+					th:src="@{|/productImageukulele?code=${info.id}|}" />
+			</div>
+
+		</div>
+		<!--san pham-->
+
+		<div class="col-sm-6 ">
+			<div class="text-infomation">
+				<div class="ten">
+					<span th:text="${info.name}"> </span>
+				</div>
+				<div class="small-info">
+					( <span th:text="${info.visits}"> </span> lượt xem)
+				</div>
+
+				<div class="tensanpham">
+					Giá: <span th:text="${info.gia}"> </span>
+				</div>
+				<div class="small-info" th:switch="${info.giamgia}">
+
+					<div th:case="'0'"></div>
+					<div th:case="*">
+						Giá cũ: <span class="giamgia" th:text="${info.giasaugiam}"></span>
+						(-<span th:text="${info.giamgia}"></span>%)
+					</div>
+
+				</div>
+
+				<div class="loai-hang">
+					Loại: <span th:text="${info.category}"> </span>
+				</div>
+				<div class="loai-hang">
+					Hãng: <span th:text="${info.producer}"> </span>
+				</div>
+				<div class="loai-hang">
+					Màu: <span th:text="${info.color}"> </span>
+				</div>
+
+				<div>
+					<span id="danhgia" th:text="${info.rate}"> </span> (<span
+						th:text="${info.luotdanhgia}"> </span> đánh giá)
+				</div>
+				<br />
+				<div class="status">
+					<span class="glyphicon glyphicon-hand-right "></span>Trạng thái: <span
+						id="trangthai" th:text="${info.soluong}"> </span>
+				</div>
+				<br /> <br />
+				<button class="btnchitiet btn">
+					<span class="glyphicon glyphicon-shopping-cart"></span> Mua
+				</button>
+				<button class="btnchitiet btn">
+					<span class="glyphicon glyphicon-search"></span> Chi tiết
+				</button>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="container jumbotron right">
+		<div class="tieude ">BÌNH LUẬN()</div>
+		<br />
+
+	</div>
+	<div class="container jumbotron right">
+
+		<div class="menu-title">
+
+			<a>CÁC SẢN PHẨM KHÁC</a> <br />
+		</div>
+		<!--san pham-->
+		<div th:each="contact,iterStat : ${infos}">
+			<div class="col-sm-3 ">
+				<div class="sanpham panel panel-default">
+					<div class="panel-body imgpr">
+						<img class="img-responsive "
+							th:src="@{|/productImage?code=${contact.id}|}" />
+						<div th:if="${contact.giamgia}!=0">
+							<div class="sticksale">
+								-<span th:text="${contact.giamgia}"></span>%
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p class="tensanpham" th:text="${contact.name}"></p>
+
+						<p class="cost" th:text="${contact.giasaugiam}"></p>
+
+						<div th:switch="${contact.giamgia}">
+
+							<p class="status" th:case="'0'" th:text="${contact.producer}"></p>
+							<p class="status" th:case="*">
+								<span class="giamgia" th:text="${contact.gia}"></span>
+							</p>
+
+						</div>
+						<a th:href="@{/product_ukulele/{id}(id=${contact.id})}"><button
+								class="btnchitiet btn">
+								<span class="glyphicon glyphicon-shopping-cart"></span> Chi tiết
+							</button></a>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<div>
+			<a class="xemthem" th:href="@{/ukulele}">Xem thêm >></a>
+		</div>
+	</div>
+
+
+
+
+
+
+	<footer th:replace="index :: footer"></footer>
+</body>
+</html>

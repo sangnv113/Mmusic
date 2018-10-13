@@ -1,0 +1,408 @@
+body{
+    font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+/*bar-top-menu*/
+#menu{
+    z-index: 3;
+}
+
+#main-menu a{
+    color: white;
+    font-size: 19px;
+    
+    font-weight: bold;
+    
+}
+
+
+#main-menu a:hover{
+     background-color: #175B27;
+}
+.navbar, .dropdown-menu
+{
+    background-color: #3BA854;
+   
+}
+
+
+ #main-menu li:hover .dropdown-menu {
+            display: block;
+        }
+/*glyphicon*/
+.glyphicon{
+
+   font-size: 15px;
+}
+/*top logo*/
+.support-header {
+    width: 300px; 
+    top :20px;  
+    position: absolute; 
+    right: 100px;
+    font-weight: inherit;
+    font-size: 15px;
+    
+     color: #5B0E15;
+}
+#search{
+    width: 400px;
+    padding: 17px 0 0 70px;
+   
+    
+}
+/*footer*/
+
+.footer{
+    background-color:#575757;
+    color:#FFF;
+    padding-left:0;
+    line-height:26px;
+    
+    padding-top:15px;
+    font-size:15px;
+    
+  
+}
+.footer a{
+    background-color:#575757;
+    color:#F49620;
+ 
+    
+  
+}
+.tenfooter{
+    font-size: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    margin-bottom: 3px;
+}
+/*tieu de lon*/
+
+.tieude{
+    color: #F4691C;
+     font-size: 25px;
+    margin-top: 10px;
+   /* font-weight: bold;
+    background-color: #848484;
+     border-radius: 100px;
+    
+    text-align: center;*/
+   
+}
+.menu-title{
+    background-color:#175B27;
+     
+    border-radius: 30px;
+    margin-bottom: 30px;
+   
+}
+.menu-title a{
+    color: aliceblue;
+    font-size: 20px;
+    margin-left: 20px;
+    
+}
+.modal-header {
+      background-color: #755139;
+      color:white !important;
+      text-align: center;
+     
+  }
+.xemthem{
+    float: right;
+    margin-top: 30px;
+    font-size: 20px;
+     
+    color:  #F4691C;
+}
+.anh-danhmuc{
+    width: 375px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+.tiltle-img{
+    position: absolute;
+    font-size: 25px;
+    color:white;
+     font-weight: bold;
+    margin-top: 150px;
+    margin-left: 60px;
+   
+    
+}
+.tiltle-img:hover{
+     text-decoration-line:underline;
+    color:white;
+}
+
+
+#danhgia img{
+	margin-bottom:6px;
+} 
+
+
+/*sanpham*/
+.imgpr{
+	
+	
+}
+.sticksale
+{
+	position:absolute;
+   right: 20px;
+   top: 20px;
+	background-color: red;
+	
+	margin-bottom: 5px;
+	color: white;
+	 font-size: 15px;
+	  font-weight: bold;
+    border-radius: 3px;
+}
+.sanpham {
+   text-align: center;
+    transition: box-shadow 0.5s; 
+}
+.sanpham:hover{
+  box-shadow: 5px 0px 15px rgba(0,0,0,0.7);
+}
+.giamgia{
+	text-decoration: line-through;
+	font-size: 15px !important;
+	
+	 margin-bottom: 0px !important;
+}
+.cost{
+	/* background-color: #175B26; */
+	
+	margin-bottom: 0px !important;
+	/* color: white; */
+	 font-size: 17px !important;
+	  font-weight: bold !important;
+    border-radius: 10px;
+}
+.status{
+   
+   margin-bottom: 5px !important;
+
+    
+    font-size: 15px !important;
+    font-weight: bold;
+}
+.tensanpham{
+	font-weight: bold !important;
+    color: red;
+    
+    margin-bottom: 0px !important;
+    margin-top:7px;
+    font-size: 17px !important;
+}
+.tensanpham a{
+    color: #963A44;
+  
+}
+.sanphamnho{
+    width: 95%;
+}
+/*btn mua*/
+.btnchitiet{
+    /*font-weight: bold;*/
+    background-color:  aliceblue;
+    color: #175B26;
+    border-radius: 5px;
+    font-size: 17px;
+    width: 100px;
+    height: 40px;
+    transition: box-shadow 0.5s; 
+     border: 3px solid #175B26;
+}
+.btnchitiet:hover {
+     /* border: 5px solid #575757;*/
+    background-color: #175B26;
+    color: aliceblue;
+    /*box-shadow: 5px 0px 40px rgba(0,0,0,0.7);*/
+    
+}
+/*sticky*/
+.sticky{
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            
+        }
+/*left-menu*/
+
+
+.rcontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 15px;
+    
+}
+
+/* Hide the browser's default radio button */
+.rcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.rcontainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.rcontainer input:checked ~ .checkmark {
+    background-color: #5B0E16;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.rcontainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.rcontainer .checkmark:after {
+ 		top: 5px;
+	left: 5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+/* hjk */
+
+
+.btnfilter{
+	background-color :#a79145;
+	color: white;
+	 margin-left: 50px;
+	font-weight: bold;
+}
+.left-menu{
+    float: left;
+    margin-left: 10px;
+    background-color: #E6E6E6;
+    width: 250px;
+     border-radius: 10px;
+    top: 60px;
+     z-index: 2;
+}
+.left-menu li{
+   
+    list-style-type: none;
+    font-size: 17px;
+   color: #963A44;
+    font-weight: bold;
+    margin-left: 13%;
+}
+
+.left-menu a{
+   
+    color: #5B0E16;
+    font-size: 17px;
+    margin-left:10%; 
+   font-family:serif;
+    
+}
+.left-menu a:hover{
+   
+    
+    
+}
+.right{
+    margin-left: 20%;
+    margin-right: 10%;
+    width: auto;
+}
+/*product-info*/
+
+.product-image{
+   /* width: 120%;
+    height: auto;*/
+}
+.text-infomation{
+      margin-top:40px;
+       margin-left:30px;
+    font-family: "Arial", "Helvetica", "sans-serif";
+}
+.small-info{
+	  font-size: 15px;
+	  margin-left:5px;
+	  color: #322435;
+	  	 margin-bottom:10px;
+}
+.ten{
+	font-size: 22px;
+	 font-weight: bold;
+}
+
+.loai-hang{
+	 margin-bottom:7px;
+	 font-size: 17px;
+}
+.inputnumber{
+		width: 50px;
+}
+/* form */
+.form-group input{
+	 width: 300px;
+}
+.form-group select{
+	width: 100px;
+	height:30px;
+}
+.form-group a{
+	 color: #3BA854;
+	 
+	
+	   }
+.form-edit{
+	 margin-top:10px;
+	 /* 
+	border-style: groove; */
+	width: 60%;
+}
+.btnsave{
+	margin-left:20%;
+	 
+}
+/* form product */
+.form-center{
+	
+}
+.error-message {
+	
+    font-size: 90%;
+    color: red;
+    font-style: italic;
+    
+}
+.form-table{
+	 width: 900px;
+	 margin-left:40px;
+}
